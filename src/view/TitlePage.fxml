@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MyController">
+   <children>
+      <MenuBar layoutX="-2.0" prefHeight="25.0" prefWidth="606.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#menuItemClicked" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Accordion layoutX="236.0" layoutY="70.0" />
+      <Button fx:id="editButton" layoutX="413.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="93.0" prefWidth="149.0" text="Edit">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="createButton" layoutX="43.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="93.0" prefWidth="149.0" text="Create">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewButton" layoutX="226.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="93.0" prefWidth="149.0" text="View">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="62.0" layoutY="120.0" prefHeight="41.0" prefWidth="478.0" text="D2L Quiz Creator" AnchorPane.bottomAnchor="239.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font name="Biondi" size="42.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
