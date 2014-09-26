@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+ 
+<?scenebuilder-stylesheet vista.css?>
+ 
+<StackPane fx:id="vista2" xmlns:fx="http://javafx.com/fxml" fx:controller="paneswap.Vista2Controller">
+  <children>
+    <Button mnemonicParsing="false" onAction="#previousPane" text="Previous Pane" />
+  </children>
+</StackPane>
