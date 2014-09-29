@@ -1,6 +1,7 @@
 package manifest;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -12,7 +13,7 @@ public class Manifest
 {
 	private String identifier;
 	
-	private ArrayList<ManifestResource> resources;
+	private List<ManifestResource> resources;
 
 	@XmlAttribute
 	public String getIdentifier()
@@ -27,13 +28,13 @@ public class Manifest
 
 	@XmlElementWrapper(name = "resources")
 	@XmlElement(name = "resource")
-	public ArrayList<ManifestResource> getResources()
+	public List<ManifestResource> getResources()
 	{
 		return resources;
 	}
 
-	public void setResources(ArrayList<ManifestResource> resources)
+	public void setResources(List<ManifestResource> res)
 	{
-		this.resources = resources;
+		this.resources = res;
 	}
 }

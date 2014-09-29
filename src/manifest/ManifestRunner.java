@@ -2,6 +2,7 @@ package manifest;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -21,7 +22,7 @@ public class ManifestRunner
 
 	public static void marshall(JAXBContext context) throws JAXBException
 	{
-		ArrayList<ManifestResource> res = new ArrayList<ManifestResource>();
+		List<ManifestResource> res = new ArrayList<ManifestResource>();
 
 		ManifestResource mr = new ManifestResource();
 		mr.setIdentifier("example");
@@ -38,7 +39,9 @@ public class ManifestRunner
 
 		Marshaller marsh = context.createMarshaller();
 		marsh.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-
+		marsh.setProperty(Marshaller.JAXB_FRAGMENT, Boolean.TRUE);
+		System.out.print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+		
 		marsh.marshal(m, System.out);
 	}
 	
@@ -46,7 +49,7 @@ public class ManifestRunner
 	{
 		Unmarshaller unmarsh = context.createUnmarshaller();
 		Manifest m = (Manifest) unmarsh.unmarshal(new File(MANIFEST_XML));
-		ArrayList<ManifestResource> res = m.getResources();
+		List<ManifestResource> res = m.getResources();
 		for(ManifestResource r : res)
 		{
 			String ident = r.getIdentifier();
